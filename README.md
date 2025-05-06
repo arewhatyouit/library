@@ -1,0 +1,1 @@
+A basic library web-app, allowing users to add and remove books and mark if they've been read. Done as part of the coursework for The Odin Project.
