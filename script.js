@@ -2,9 +2,10 @@
 let myLibrary = [];
 
 // Constructor to create a new book entry into myLibrary array
-function Book(title, author) {
+function Book(title, author, pages) {
   this.title = title;
   this.author = author;
+  this.pages = pages;
   this.elementId = crypto.randomUUID();
   this.read = false;
 }
@@ -21,9 +22,10 @@ document.querySelector("form").addEventListener("submit", function (event) {
   const formData = new FormData(this);
   const title = formData.get("input-title");
   const author = formData.get("input-author");
-  let newBook = new Book(title, author);
+  const pages = formData.get("input-pages")
+  let newBook = new Book(title, author, pages);
   myLibrary.push(newBook);
-  displayInGrid(title, author);
+  displayInGrid(title, author, pages);
   this.reset();
 });
 
@@ -37,6 +39,7 @@ function displayInGrid(title, author, elementId) {
     <div class="book" id=${book.elementId}>
       <h3 class="card-title">Title: ${book.title}</h3>
       <h3 class="card-author">Author: ${book.author}</h3>
+      <h3 class="card-pages">Pages: ${book.pages}</h3>
       <h3 class="card-read">Read: No</h3>
       <div class="card-button-div">
         <button id="card-remove-button">Remove</button>
