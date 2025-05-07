@@ -2,6 +2,9 @@
 
 A simple JavaScript application to track your book collection with read status management. This project was created as coursework for The Odin Project's JavaScript curriculum.
 
+## Live Preview
+Check out the live application: [https://library.octoprismo.com/](https://library.octoprismo.com/)
+
 ## Features
 - Add books with title, author, and page count information
 - Display books in a responsive grid
